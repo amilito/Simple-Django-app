@@ -1,0 +1,19 @@
+{% extends "waste_segregation_app/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <h3>Descibe your trash</h3>
+{% endblock page_header %}
+
+{% block content %}
+
+<form action="{% url 'waste_segregation_app:new_trash' %}" method = 'post'>
+    {% csrf_token %}
+    <form>
+    <label for="trash_description">Trash name</label>
+    <input type="text" class="form-control" id="trash_description" placeholder="plastic bottle, tea bag" name="trash_description"><br>
+    <button type="submit" class="btn btn-primary mb-2">Check</button>
+    </form>
+</form>
+
+{% endblock content %}
