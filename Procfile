@@ -1,1 +1,1 @@
-web: gunicorn:waste_segregation_project.wsgi --log-file
+web: gunicorn:waste_segregation_project.wsgi --log-file -
